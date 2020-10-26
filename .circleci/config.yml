@@ -5,11 +5,11 @@ jobs:
       - image: circleci/node:lts
     steps: 
       - run: 
-          name: Stage 1
-          command: echo "install"
+          name: Build
+          command: echo "build"
       - run:
-          name: Stage 2
-          command: echo "???"
+          name: Run unit tests
+          command: echo "unit tests"
       - run:
           name: Stage 3
-          command: echo "profit"
+          command: echo "deploy to host"
