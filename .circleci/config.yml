@@ -5,6 +5,12 @@ jobs:
       - image: circleci/node:lts
     steps: 
       - checkout
+      - run:
+          name: Install npm
+          command: sudo apt install npm
+      - run:
+          name: Install npm
+          command: sudo apt install npm
       - run: 
           name: Build
           command: npm run build
