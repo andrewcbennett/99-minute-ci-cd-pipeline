@@ -7,10 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install npm
-          command: sudo apt install npm
-      - run:
-          name: Install npm
-          command: sudo apt install npm
+          command: npm install
       - run: 
           name: Build
           command: npm run build
