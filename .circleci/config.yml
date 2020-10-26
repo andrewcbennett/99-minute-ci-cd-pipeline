@@ -5,15 +5,15 @@ jobs:
       - image: circleci/node:lts
     steps: 
       - checkout
-      - run:
-          name: Install npm
-          command: npm install
       - run: 
           name: Build
-          command: npm run build
+          command: npm install
       - run:
-          name: Run unit tests
+          name: Run Unit Tests
           command: npm run test
       - run:
           name: Deploy
-          command: echo "deploy to host"
+          command: npm run start &
+      - run:
+          name: Run Functional Tests
+          command: npm run test-wdio
